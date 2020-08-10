@@ -19,6 +19,6 @@ aumento = sueldo * 10 / 100;
 //Aplico el incremento
 resultado = sueldo + aumento;
 
-//Muestro el resultado por el cuadro de texto
+//Muestro el resultado por el cuadro de texto!!!!!!!
 document.getElementById("txtIdResultado").value=resultado;
 }
