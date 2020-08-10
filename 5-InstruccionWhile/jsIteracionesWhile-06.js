@@ -1,13 +1,47 @@
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var numeroIngresado;
+//Declaro variables INCOMPLETO
+let i = 0;
+let numero;
+let suma = 0;
+let promedio;
 
-	contador=0;
-	acumulador=0;
+
+//Creo el bucle para contar los numeros del usuario
+while(i < 5)
+{
+	//A medida que el usuario ingresa los numeros, los sumo y aumento el contador
+	numero = parseInt(prompt("Ingrese un numero"));
+	while(isNaN(numero))
+	{
+		numero = parseInt(prompt("El caracter ingresado no es un número, por favor ingrese un número"));
+	}
 	
-	
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/5;
+	suma += numero;
+	i++;
+}
+//Calculo el promedio
+promedio = suma / i;
+
+//Muestro la suma y el promedio en pantalla
+document.getElementById("txtIdSuma").value = suma;
+document.getElementById("txtIdPromedio").value = promedio;
+
+
+
+//Sin usar while, comentar despues de clases
+/*numero = parseFloat(prompt("Ingrese un número"));
+suma+=numero;
+numero = parseFloat(prompt("Ingrese un número"));
+suma+=numero;
+numero = parseFloat(prompt("Ingrese un número"));
+suma+=numero;
+numero = parseFloat(prompt("Ingrese un número"));
+suma+=numero;
+numero = parseFloat(prompt("Ingrese un número"));
+suma+=numero;
+promedio = suma/5;
+document.getElementById("txtIdSuma").value = suma;
+document.getElementById("txtIdPromedio").value = promedio;*/
+
 }//FIN DE LA FUNCIÓN
